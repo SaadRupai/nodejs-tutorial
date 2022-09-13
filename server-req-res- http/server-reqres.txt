@@ -1,0 +1,53 @@
+->nodejs platform has its own library.
+->to manage library = node package manager created (npm).
+
+
+
+->nodejs module:
+  3 types of module. 
+  Core modules: http, url, path, fs, querystring, util.
+  Local modules: self made.
+  Third party modules: third party modules.
+
+
+->http module: to make node server, we need http module.
+  	var http = require('http');  //connect to http module // in a var to run in a port
+	var server=http.createServer(function(req, res){    //this callback function handles response
+		res.end("Hello World");	        // req- manages requests and res-sends a response
+	});
+  	server.listen(5050);
+	sonsole.log("server run success");  //to check if works
+
+
+->request-response model: (http protocol) (server side tech)
+  client generates a http request, then server performs the request and sends a response to the client.
+  http request methods: GET(), DELETE(), POST(), PUT(), OPTIONS(), HEAD().
+  response: contains status code and data.
+  status code: 200, 404, 500.
+  data: is got in head and body. body contains json/xml (not sensitive). 
+	head contains access token, username etc private data (key-value format; sensitive).
+
+
+->req, res application:
+  request is sent using url (*****)
+  	var http = require('http');
+
+	var server = http.createServer(function (req, res) {
+    		if (req.url == '/') {           // have to sent request using url
+        		res.writeHead(200, { 'contect-type': 'text/html' });   // head part{key-value}
+        		res.write('<h1>This is Home page!</h1>');       // body part
+        		res.end();                  //need to close response
+    		} else if (req.url == '/about') {
+       		 	 res.writeHead(200, { 'contect-type': 'text/html' });
+        		res.write('<h1>This is About page!</h1>');
+        		res.end();
+    		} else if (req.url == '/contact') {
+        		res.writeHead(200, { 'contect-type': 'text/html' });
+        		res.write('<h1>This is Contact page!</h1>');
+        		res.end();
+    		}
+	});
+
+	server.listen(5050);
+	console.log("server connected");
+  
