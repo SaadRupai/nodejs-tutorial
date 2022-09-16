@@ -22,9 +22,9 @@ function insertData(myMongoClient) {
     let myCollection = myMongoDB.collection('students');   //connecting collection
 
     //data must be inserted in JSON format
-    let myData = { name: "Saad", ID: "1703069", Section: "B", City: "Rajshahi" };
+    let myData = { name: "NFahim", ID: "1703042", Section: "A", City: "Bogura" };
 
-    let myData2 = { name: "Ratul", ID: "1703093", Section: "B", City: "Rajshahi" };
+    let myData2 = { name: "Dihan", ID: "1703093", Section: "C", City: "Chittagong" };
 
     let res = myCollection.insertOne(myData);
 
