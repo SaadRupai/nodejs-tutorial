@@ -1,7 +1,12 @@
 var MongoClient = require('mongodb').MongoClient                //importing mongodb module
 
 // url from mongodb website
-var URL = 'mongodb+srv://saadrupai:AJohIXSnI4iBxNpU@cluster0.bfiqyat.mongodb.net/?retryWrites=true&w=majority';
+// var URL = 'mongodb+srv://saadrupai:AJohIXSnI4iBxNpU@cluster0.bfiqyat.mongodb.net/?retryWrites=true&w=majority';
+
+// url for connecting with database named school of a cluster
+
+var URL = 'mongodb+srv://saadrupai:AJohIXSnI4iBxNpU@cluster0.bfiqyat.mongodb.net/school?retryWrites=true&w=majority'
+
 
 // var config = `--global`;
 
