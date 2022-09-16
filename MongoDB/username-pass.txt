@@ -1,2 +1,6 @@
 username: saadrupai
+<<<<<<< HEAD
 pass: nisaadAJohIXSnI4iBxNpU
+=======
+pass: nisaadAJohIXSnI4iBxNpU
+>>>>>>> 5081e33aa76a10f711d1448adf57fe514aaeebbb
